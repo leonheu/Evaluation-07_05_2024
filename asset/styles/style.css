@@ -1,0 +1,609 @@
+/* mets le padding et margin de default a 0 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Backround d'inmage et fait un grid sur l'ensemble des pages et on applique la police sur l'ensemble des pages*/
+body {
+    background: no-repeat center url(/asset/img/back-image.png);
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+/* Nomme area du header et on le fait prendre toute la largeur et on centre. Ensuite on fait du flex et centre les enfants XD*/
+header {
+    justify-self: center;
+    width: 100%;
+    grid-area: header;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* réglage de la taille de l'image */
+header img {
+    width: 10%;
+}
+
+/* on décore et centre les éléments de la nav bar */
+.header-nav {
+    width: 40%;
+    margin-left: 10%;
+}
+
+/* on flex ici pour séparer les li et les mettres en ligne */
+.header-nav ul {
+    width: 100%;
+    display: flex;
+    gap: 20%;
+}
+
+/* on enlève les point de la liste et on centre avec un padding */
+.header-nav ul li {
+    list-style: none;
+    padding: 0% 2%;
+}
+
+/* décoration  des liens */
+.header-nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 800;
+}
+
+/* Au sur vole change la couleur et rajoute un text shadow pour la visibilité du texte */
+.header-nav ul li a:hover {
+    color: #fff;
+    text-shadow: #333 1px 0 15px;
+}
+
+/* centrage des bouttons */
+.header-div {
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* on crée un lien en forme de bouton avec une animation de transition qui arrondi les bords */
+.header-div a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 700;
+    padding: 2% 3%;
+    background-color: #0abde3;
+    background: linear-gradient(to right, #48dbfb, #0abde3);
+    border-radius: 30px;
+    border-top-left-radius: 0px;
+    transition: 0.5s;
+}
+
+/* au survol arrondi les bordures */
+.header-div a:hover {
+    border-radius: 30px;
+}
+
+/* au clic rend le background blanc et donne une bordure */
+.header-div a:active {
+    background: none;
+    border: 1px solid black;
+    background-color: #fff;
+}
+
+
+/* Accueil-->Nomme area du main et on le fait prendre toute la largeur */
+.main-home {
+    width: 100%;
+    min-height: 90vh;
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+}
+
+/*Accueil--> flex sur interieur des deux image et centrage */
+.home-img-left,
+.home-img-right {
+    width: 40%;
+    margin: 5%;
+    display: flex;
+    justify-content: center;
+}
+
+/* image en haut à gauche */
+.home-img-left {
+    align-self: flex-start;
+}
+
+/* image en bas a droite */
+.home-img-right {
+    align-self: flex-end;
+}
+
+/*Accueil-->réglage largueur img. Animation et delay de l'apparition */
+.home-img-left img {
+    width: 60%;
+    animation: go-up 2s backwards;
+    animation-delay: 0.25s;
+}
+
+/*Accueil-->  réglage largueur img. Animation et delay de l'apparition */
+.home-img-right img {
+    width: 50%;
+    animation: go-up 2s backwards;
+    animation-delay: 1.5s;
+}
+
+
+
+/* Accueil-->Aligement centrale du texte et flex pour centre les enfants. Ensuite décoration de la boite. 
+2 background pour les gens qui utilise IE et qui on pas de couleur dégradé (les pauvres il travaille surment à la mairie ^^) */
+.main-home section {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #48dbfb;
+    background: linear-gradient(to left, #48dbfb, #0abde3);
+    height: 600px;
+    width: 50%;
+    border-radius: 10px;
+    box-shadow: -1px -1px 10px #222;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+
+}
+
+/* Accueil-->décoration et animation du titre */
+.main-home section h1 {
+    text-align: center;
+    color: #333;
+    margin: 5%;
+    animation: go-up 2s backwards;
+    animation-delay: 0.5s;
+}
+
+/* Accueil-->décoration et animation du texte */
+.main-home section p {
+    margin: 5%;
+    color: #222;
+    animation: go-up 2s backwards;
+    animation-delay: 1s;
+}
+
+/* A propos de nous--> Flex dans la section de la galerie */
+.main-us {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* A propos de nous-->Centrage pour la box de la vidéo.*/
+.main-us .us-figure-video {
+    width: 40%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* A propos de nous-->Réglage de la taille de la vidéo */
+.main-us .us-figure-video video {
+    width: 90%;
+}
+
+.main-us .us-figure-video figcaption {
+    margin-top: 3%;
+    color: #333;
+    font-weight: 500;
+}
+
+/* A propos de nous-->Centrage de la présentation. Décoration avec une box et un effet dégradé. 2 bg pour les IE user*/
+.main-us .us-section-txt {
+    width: 50%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #48dbfb;
+    background: linear-gradient(to left, #48dbfb, #0abde3);
+    border-radius: 10px;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+    box-shadow: -1px -1px 10px #222;
+}
+
+/* A propos de nous--> Coloration du titre*/
+.main-us .us-section-txt h2 {
+    color: #333;
+    margin-bottom: 10%;
+}
+
+/* A propos de nous--> coloration du texte */
+.main-us .us-section-txt p {
+    color: #222;
+    margin: 0 5%;
+}
+
+/* Contact--> alignement du formulaire avecl flex et réglage de la taille du main */
+.main-contact {
+    width: 100%;
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contact-->réglage de la taille du formulaire et grid pour placer les éléments du formulaire */
+.main-contact fieldset {
+    width: 70%;
+    height: 80%;
+    background-color: #10ac84;
+    background: linear-gradient(to left, #1dd1a1, #10ac84);
+    border-radius: 10px;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+    box-shadow: -1px -1px 10px #222;
+    padding: 3%;
+}
+
+/* Contact-->grid sur le formulaire pour place les éléments */
+.form-contact {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas:
+        "name firstname"
+        "mail phone"
+        "object object"
+        "msg msg"
+        "submit submit"
+    ;
+    justify-items: center;
+    align-items: center;
+}
+
+/* Contact-->centrage avec flex */
+.form-name,
+.form-firstname,
+.form-mail,
+.form-phone,
+.form-object,
+.form-msg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contact-->margin pour certain label */
+.form-name label,
+.form-firstname label,
+.form-mail label,
+.form-phone label,
+.form-object label {
+    margin-bottom: 5%;
+}
+
+/* Contact-->on agrandit le contenu pour textarea */
+.form-msg {
+    width: 100%;
+    height: 100%;
+}
+
+/* Contact-->reglage de la taille et rend non sizable pour textarea */
+.form-msg textarea {
+    width: 80%;
+    height: 100%;
+    resize: none;
+}
+
+/* Contact-->nommage pour name */
+.form-name {
+    grid-area: name;
+}
+
+/* Contact-->nommage pour prénom */
+.form-firstname {
+    grid-area: firstname;
+}
+
+/* Contact-->nommage */
+.form-firstname label {
+    margin-bottom: 5%;
+}
+
+/* Contact-->nommage */
+.form-mail {
+    grid-area: mail;
+}
+
+/* Contact-->nommage */
+.form-phone {
+    grid-area: phone;
+}
+
+/* Contact-->nommage */
+.form-object {
+    grid-area: object;
+}
+
+/* Contact-->nommage */
+.form-msg {
+    grid-area: msg;
+}
+
+/* Contact-->nommage */
+.form-submit {
+    grid-area: submit;
+}
+
+/* Galerie réglage taille main */
+.main-galerie {
+    width: 100%;
+    min-height: 70vh;
+}
+
+/* flex sur les éléments de la galerie avec un wrap pour le responsive */
+.main-galerie div {
+    width: 100%;
+    margin: 4% 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* reglage de la taille des img */
+.main-galerie div img {
+    margin: 2%;
+    width: 400px;
+    height: 400px;
+}
+
+/* animation au survol */
+.main-galerie div img:hover {
+    animation: choosing 2s forwards;
+}
+
+
+/* nomme area du footer et on le fait prendre toute la largeur et on grid pour avoir 3 col */
+footer {
+    grid-area: footer;
+    width: 100%;
+    height: 25vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+}
+
+/* Flex en col et on aligne */
+.footer-title,
+.footer-links,
+.footer-social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+}
+
+/* déco du nom de l'entreprise */
+footer h2 {
+    color: #333;
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+/* change tout les titre du footer en #333 et en gras 700 et centre le tout */
+.footer-title h3 {
+    text-align: center;
+    color: #333;
+    font-weight: 700;
+}
+
+/* change le gras du texte et mets en #222 */
+.footer-title p {
+    color: #222;
+    font-weight: 400;
+}
+
+/* On enleve le style de type liste et on centre le texte */
+.footer-nav li {
+    list-style: none;
+    text-align: center;
+}
+
+/* enleve le txt souligner et me le txt en #222 */
+.footer-nav li a {
+    text-decoration: none;
+    color: #222;
+}
+
+/* agrandi le txt au survol */
+.footer-nav li a:hover {
+    font-size: 1.1rem;
+}
+
+
+/* On centre les icones */
+.footer-social-links {
+    text-align: center;
+}
+
+/* marge pour séparer les icones entre eux */
+.footer-social-links a {
+    margin: 0% 5%;
+}
+
+/* opacité au survol */
+.footer-social-links a:hover {
+    -webkit-filter: invert(0.5);
+}
+
+/* Réglages de la taille des icones svg */
+.footer-social-links a svg {
+    width: 6%;
+}
+
+/* keyframe pour l'animation du home */
+@keyframes go-up {
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+}
+
+@keyframes choosing {
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    0% {
+        transform: scale(0.9);
+        opacity: 0.5;
+    }
+}
+
+
+/* mediaquerie pour téléphone et tablette*/
+@media screen and (max-width: 550px) {
+
+    /* mets le header en direction colonne */
+    header {
+        flex-direction: column;
+    }
+
+    /* change la taille du logo */
+    header img {
+        width: 20%;
+        height: 5vh;
+    }
+
+    /* la nav prend 100% de largeur */
+    .header-nav {
+        width: 100%;
+    }
+
+    /* placement des textes */
+    .header-nav li {
+        margin: 5%;
+    }
+
+    /* la box des boutons prennent 100% de largeur */
+    .header-div {
+        width: 100%;
+    }
+
+    /* on espace les boutons */
+    .header-btn {
+        gap: 4%;
+    }
+
+
+
+    /* Galerie-->reglage de la taille des img */
+    .main-galerie div img {
+        margin: 2%;
+        width: 200px;
+        height: 200px;
+    }
+
+    /* Contact-->changement du grid pour le formulaire */
+    .form-contact {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(7, 1fr);
+        grid-template-areas:
+            "name"
+            "firstname"
+            "mail"
+            "phone"
+            "object"
+            "msg"
+            "submit"
+        ;
+        justify-items: center;
+        align-items: center;
+    }
+
+    /* A propos de nous--> main direction col et une marge en haut */
+    .main-us {
+        flex-direction: column;
+        margin-top: 30%;
+        width: 100%;
+    }
+
+    /* A propos de nous-->Changement taille video */
+    .main-us .us-figure-video {
+        width: 100%;
+    }
+
+    /* A propos de nous-->Changement taille texte bloc */
+    .main-us .us-section-txt {
+        width: 80%;
+        height: 40%;
+    }
+
+    /* A propos de nous-->Changement taille du texte */
+    .main-us .us-section-txt h2 {
+        font-size: 0.7rem;
+    }
+
+    /* A propos de nous-->Changement taille du texte */
+    .main-us .us-section-txt p {
+        font-size: 0.6rem;
+    }
+
+    /* centrage */
+    .main-home {
+        justify-content: center;
+    }
+
+    /* changement hauteur */
+    .main-home section {
+        height: 300px;
+    }
+
+    /* changement taille police */
+    .main-home section h1 {
+        font-size: 0.9rem;
+    }
+
+    /* changement taille police */
+    .main-home section p {
+        font-size: 0.7rem;
+    }
+
+    /* changement du grid en colonne et espacement*/
+    footer {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        gap: 10%;
+    }
+}

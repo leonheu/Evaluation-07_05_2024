@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./asset/styles/style.css">
+</head>
+
+<body>
+    <!-- header avec le logo, la nav et a droite les liens en forme de bouttons avec animation -->
+    <header>
+        <!-- img Logo -->
+        <img src="./asset/img/logo.jpg" alt="logo">
+        <!-- Barre de navigation -->
+        <nav class="header-nav">
+            <ul>
+                <li><a href="./index.html" title="Accueil">Accueil</a></li>
+                <li><a href="./templates/galerie.html" title="Galerie">Galerie</a></li>
+            </ul>
+        </nav>
+        <!-- liens pour faire des genres de bouttons -->
+        <div class="header-div">
+            <a href="./templates/us.html" title="A propos de nous" class="header-btn">A propos de nous</a>
+            <a href="./templates/contact.html" title="Nous contacter" class="header-btn"> Nous contacter</a>
+        </div>
+    </header>
+
+    <!-- Main de la page d'accueil avec un titre et une presentation rapide -->
+    <main class="main-home">
+        <div class="home-img-left"><img src="./asset/img/galeries-main/elephant-home.png" alt="elephant"></div>
+        <section>
+            <h1>Bienvenu sur Zoo&Co</h1>
+            <p>Zoo&Co et un zoo situé à CLICHY-SOUS-BOIS. Sur ce site on peut visioné les photos de notre zoo que l'on partage dans la
+                galrie photo.<br>Vous pouvez nous contacter pour tout sujet sur nous ou nos animaux dans le liens de contact.<br>Juste un
+                formulaire a remplire c'est tout simple. Merci et Bonne visite sur notre site</p>
+        </section>
+        <div class="home-img-right"><img src="./asset/img/galeries-main/gorilla-home.png" alt="gorille"></div>
+    </main>
+
+    <!-- footer avec 3 partie l'adresse, les liens et les reseau social vers l'exterieur-->
+    <footer>
+        <!-- Nom entreprise et personne et adresse -->
+        <div class="footer-title">
+            <h2>Zoo&Co</h2>
+            <div class="footer-address">
+                <h3>Christien Lajeunesse</h3>
+                <address>
+                    <p>56, Rue de Strasbourg
+                        <br>93390 CLICHY-SOUS-BOIS
+                    </p>
+                </address>
+            </div>
+        </div>
+
+        <!-- lien vers les autres section du site -->
+        <div class="footer-links">
+            <h2>Links</h2>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="./index.html" title="Accueil">Accueil</a></li>
+                    <li><a href="./templates/galerie.html" title="Galerie">Galerie</a></li>
+                    <li><a href="./templates/us.html" title="A propos de nous">A propos de nous</a></li>
+                    <li><a href="./templates/contact.html" title="Nous contacter"> Nous contacter</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Lien en icone vers les reseaux sociaux  -->
+        <div class="footer-social">
+            <h2>Social media</h2>
+            <div class="footer-social-links">
+                <a href="https://www.facebook.com/" title="Facebook" target="_blank"><svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                        <path
+                            d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z" />
+                    </svg></a>
+                <a href="https://twitter.com/" title="X" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                        <path
+                            d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm297.1 84L257.3 234.6 379.4 396H283.8L209 298.1 123.3 396H75.8l111-126.9L69.7 116h98l67.7 89.5L313.6 116h47.5zM323.3 367.6L153.4 142.9H125.1L296.9 367.6h26.3z" />
+                    </svg>
+                </a>
+                <a href="https://discord.com/" title="discord" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 640 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                        <path
+                            d="M524.5 69.8a1.5 1.5 0 0 0 -.8-.7A485.1 485.1 0 0 0 404.1 32a1.8 1.8 0 0 0 -1.9 .9 337.5 337.5 0 0 0 -14.9 30.6 447.8 447.8 0 0 0 -134.4 0 309.5 309.5 0 0 0 -15.1-30.6 1.9 1.9 0 0 0 -1.9-.9A483.7 483.7 0 0 0 116.1 69.1a1.7 1.7 0 0 0 -.8 .7C39.1 183.7 18.2 294.7 28.4 404.4a2 2 0 0 0 .8 1.4A487.7 487.7 0 0 0 176 479.9a1.9 1.9 0 0 0 2.1-.7A348.2 348.2 0 0 0 208.1 430.4a1.9 1.9 0 0 0 -1-2.6 321.2 321.2 0 0 1 -45.9-21.9 1.9 1.9 0 0 1 -.2-3.1c3.1-2.3 6.2-4.7 9.1-7.1a1.8 1.8 0 0 1 1.9-.3c96.2 43.9 200.4 43.9 295.5 0a1.8 1.8 0 0 1 1.9 .2c2.9 2.4 6 4.9 9.1 7.2a1.9 1.9 0 0 1 -.2 3.1 301.4 301.4 0 0 1 -45.9 21.8 1.9 1.9 0 0 0 -1 2.6 391.1 391.1 0 0 0 30 48.8 1.9 1.9 0 0 0 2.1 .7A486 486 0 0 0 610.7 405.7a1.9 1.9 0 0 0 .8-1.4C623.7 277.6 590.9 167.5 524.5 69.8zM222.5 337.6c-29 0-52.8-26.6-52.8-59.2S193.1 219.1 222.5 219.1c29.7 0 53.3 26.8 52.8 59.2C275.3 311 251.9 337.6 222.5 337.6zm195.4 0c-29 0-52.8-26.6-52.8-59.2S388.4 219.1 417.9 219.1c29.7 0 53.3 26.8 52.8 59.2C470.7 311 447.5 337.6 417.9 337.6z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
