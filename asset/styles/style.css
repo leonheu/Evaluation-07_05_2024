@@ -260,6 +260,18 @@ header img {
     padding: 3%;
 }
 
+/* Décoration du legend sur le formulaire */
+.main-contact fieldset legend {
+    color: #222;
+    font-size: 1.2rem;
+    font-weight: 700;
+    background-color: #10ac84;
+    background: linear-gradient(to left, #1dd1a1, #10ac84);
+    border-radius: 10px;
+    box-shadow: -1px -1px 10px #222;
+    padding: 1%;
+}
+
 /* Contact-->grid sur le formulaire pour place les éléments */
 .form-contact {
     width: 100%;
